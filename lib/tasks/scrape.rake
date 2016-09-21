@@ -14,13 +14,20 @@ task scrape: :environment do
   browser = Capybara.current_session
   delphi_url = "https://www.afbostader.se/lediga-bostader/bostadsomraden/delphi/"
 
+  found = false
   if browser.visit(delphi_url)
     elements = browser.all('.vacant-housing h3 a')
     elements.each do |el|
       if el['href'].include?('obj=5146')
-        NotifyMailer.notify.deliver_now
+        found = true
+        NotifyMailer.today.deliver_now
         puts 'It is live'
       end
+    end
+
+    if !found
+      NotifyMailer.not_today.deliver_now
+      puts 'Not today :('
     end
   end
 end
