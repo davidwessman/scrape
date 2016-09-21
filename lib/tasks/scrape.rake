@@ -17,8 +17,9 @@ task scrape: :environment do
   if browser.visit(delphi_url)
     elements = browser.all('.vacant-housing h3 a')
     elements.each do |el|
-      if el['href'].include?('obj=1780')
-        puts NotifyMailer.notify.deliver_now
+      if el['href'].include?('obj=5146')
+        NotifyMailer.notify.deliver_now
+        puts 'It is live'
       end
     end
   end
