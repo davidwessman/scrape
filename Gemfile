@@ -6,7 +6,7 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 
 gem 'nokogiri'
 gem 'pg'
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 3.12'
 gem 'capybara'
 gem 'poltergeist'
 gem 'uglifier'
