@@ -1,24 +1,7 @@
-# README
+# Scarping the housing company for when my room would be rentable
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- I had already moved to a new place and wanted to contact the new person ASAP.
+- The housing company told me that I could just contact them after someone applied and got the room
+- They could not tell me what day the listing would be posted.
+- So I wrote this little script to fetch my listing everyday and see if it was possible to apply for it.
+- And then one day I got the email and could contact them to get in contact with the new renter.
